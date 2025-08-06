@@ -13,11 +13,13 @@ const loadProperties = () => {
         const propertyElement = document.createElement('div');
         propertyElement.className = 'property';
         propertyElement.innerHTML = `
-                    <img class="rounded-3xl flex-1 object-cover mb-2" src="${property.imageUrl}" alt="${property.title}" class="property-image" />  
-                    <h2 class="truncate">${property.title}</h2>
-                    <p class="text-neutral-400 text-sm truncate">${property.description}</p>
-                    <p class="underline mt-2">£${property.rentPerMonth}</p>
-                    <p class="text-neutral-400">per month</p>
+                    <a href="#" class=rounded-3xl>
+                        <img class="rounded-3xl flex-1 object-cover mb-2" src="${property.imageUrl}" alt="${property.title}" class="property-image" />  
+                        <h2 class="truncate">${property.title}</h2>
+                        <p class="text-neutral-400 text-sm truncate">${property.description}</p>
+                        <p class="underline mt-2">£${property.rentPerMonth}</p>
+                        <p class="text-neutral-400">per month</p>
+                    </a>
                 `;
         propertiesContainer.appendChild(propertyElement);
       });
