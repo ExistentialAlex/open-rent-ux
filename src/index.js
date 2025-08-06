@@ -20,7 +20,7 @@ const loadProperties = () => {
                         }" alt="${property.title}" class="property-image" />
                         ${
                           property.letAgreed
-                            ? '<div class="absolute top-0 left-0 w-full h-full bg-white opacity-65"></div><p class="absolute right-2 top-2 text-white text-sm bg-blue-400 px-2 py-1 rounded-3xl">Let Agreed</p>'
+                            ? '<div class="absolute top-0 left-0 w-full h-full bg-white opacity-65"></div><p class="absolute left-2 top-2 text-white text-sm bg-blue-400 px-2 py-1 rounded-3xl">Let Agreed</p>'
                             : ''
                         }
                         </div>
