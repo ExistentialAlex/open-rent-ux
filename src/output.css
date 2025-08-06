@@ -10,15 +10,11 @@
     --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-neutral-200: oklch(92.2% 0 0);
-    --color-neutral-300: oklch(87% 0 0);
     --color-neutral-400: oklch(70.8% 0 0);
-    --color-neutral-500: oklch(55.6% 0 0);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
-    --radius-sm: 0.25rem;
-    --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -190,6 +186,9 @@
   .grid {
     display: grid;
   }
+  .hidden {
+    display: none;
+  }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
@@ -199,9 +198,6 @@
   .w-4 {
     width: calc(var(--spacing) * 4);
   }
-  .w-20 {
-    width: calc(var(--spacing) * 20);
-  }
   .w-30 {
     width: calc(var(--spacing) * 30);
   }
@@ -210,6 +206,9 @@
   }
   .w-screen {
     width: 100vw;
+  }
+  .min-w-30 {
+    min-width: calc(var(--spacing) * 30);
   }
   .flex-1 {
     flex: 1;
@@ -228,6 +227,9 @@
   }
   .items-center {
     align-items: center;
+  }
+  .justify-center {
+    justify-content: center;
   }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
@@ -268,6 +270,10 @@
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
+  }
+  .border-l {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 1px;
   }
   .border-neutral-200 {
     border-color: var(--color-neutral-200);
@@ -312,6 +318,9 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
   .text-neutral-400 {
     color: var(--color-neutral-400);
   }
@@ -336,9 +345,24 @@
       }
     }
   }
+  .md\:block {
+    @media (width >= 48rem) {
+      display: block;
+    }
+  }
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:justify-start {
+    @media (width >= 48rem) {
+      justify-content: flex-start;
+    }
+  }
+  .lg\:block {
+    @media (width >= 64rem) {
+      display: block;
     }
   }
   .lg\:grid-cols-3 {
